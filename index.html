@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta
+    name="description"
+    content="Academic portfolio for a PhD researcher working at the intersection of computer vision, representation learning, and geometry."
+  />
+  <meta name="theme-color" content="#08111f" />
+  <title>Research Portfolio</title>
+
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+
+  <div class="page-noise" aria-hidden="true"></div>
+
+  <header class="site-header" id="top">
+    <div class="nav-shell">
+      <a class="brand" href="#home" aria-label="Home">
+        <span class="brand-mark" aria-hidden="true">
+          <span class="brand-dot"></span>
+          <span class="brand-orbit"></span>
+        </span>
+        <span id="nav-name">Akshit Nanda</span>
+      </a>
+
+      <button
+        class="nav-toggle"
+        id="nav-toggle"
+        aria-label="Open navigation"
+        aria-expanded="false"
+        aria-controls="site-nav"
+      >
+        <span></span>
+        <span></span>
+      </button>
+
+      <nav class="site-nav" id="site-nav" aria-label="Primary navigation">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#publications">Publications</a>
+        <a href="#experience">Experience</a>
+        <a href="#teaching">Teaching</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+        <a class="nav-cv" id="nav-cv" href="#" target="_blank" rel="noopener">CV</a>
+        <button class="theme-toggle" id="theme-toggle" aria-label="Toggle color theme">
+          <span class="theme-icon" aria-hidden="true">◐</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section class="hero section" id="home">
+      <canvas id="manifold-canvas" aria-hidden="true"></canvas>
+
+      <div class="hero-grid container">
+        <div class="hero-copy reveal">
+          <div class="eyebrow">
+            <span class="status-pulse"></span>
+            <span id="hero-status">PhD Researcher · Computer Vision × Geometry</span>
+          </div>
+
+          <h1>
+            I study how
+            <span class="gradient-text">geometry shapes visual representations.</span>
+          </h1>
+
+          <p class="hero-lead" id="hero-summary">
+            My research explores geometry-aware representation learning, self-supervised vision,
+            optimal transport, and non-Euclidean latent spaces.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button button-primary" href="#research">
+              Explore research
+              <span aria-hidden="true">↘</span>
+            </a>
+            <a class="button button-ghost" href="#publications">View publications</a>
+          </div>
+
+          <div class="hero-meta">
+            <div>
+              <span class="meta-label">Research focus</span>
+              <strong>Vision · Geometry · Representation Learning</strong>
+            </div>
+            <div>
+              <span class="meta-label">Currently</span>
+              <strong id="hero-affiliation">PhD Researcher</strong>
+            </div>
+          </div>
+        </div>
+
+        <aside class="hero-visual reveal" aria-label="Research motif">
+          <div class="visual-card">
+            <div class="visual-header">
+              <span>latent_manifold.py</span>
+              <span class="terminal-dots" aria-hidden="true">
+                <i></i><i></i><i></i>
+              </span>
+            </div>
+
+            <div class="manifold-panel" aria-hidden="true">
+              <svg viewBox="0 0 680 520" role="img">
+                <defs>
+                  <linearGradient id="surfaceGradient" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#58e6d9" stop-opacity="0.55"/>
+                    <stop offset="55%" stop-color="#6f87ff" stop-opacity="0.22"/>
+                    <stop offset="100%" stop-color="#d370ff" stop-opacity="0.48"/>
+                  </linearGradient>
+                  <linearGradient id="curveGradient" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#5ce8d8"/>
+                    <stop offset="50%" stop-color="#ffffff"/>
+                    <stop offset="100%" stop-color="#d370ff"/>
+                  </linearGradient>
+                  <filter id="glow">
+                    <feGaussianBlur stdDeviation="6" result="coloredBlur"/>
+                    <feMerge>
+                      <feMergeNode in="coloredBlur"/>
+                      <feMergeNode in="SourceGraphic"/>
+                    </feMerge>
+                  </filter>
+                </defs>
+
+                <g class="surface-lines">
+                  <path d="M80 325 C170 180, 270 188, 338 264 S500 386, 603 202"/>
+                  <path d="M70 354 C166 218, 278 216, 345 286 S499 410, 612 232"/>
+                  <path d="M68 382 C178 257, 286 248, 356 310 S510 428, 617 270"/>
+                  <path d="M95 288 C183 153, 264 156, 333 240 S490 350, 587 170"/>
+                  <path d="M128 258 C203 139, 273 136, 331 211 S467 315, 554 151"/>
+
+                  <path d="M126 257 C125 304, 105 345, 69 382"/>
+                  <path d="M194 186 C196 243, 177 302, 159 339"/>
+                  <path d="M272 171 C281 237, 274 296, 253 361"/>
+                  <path d="M348 248 C352 298, 350 337, 345 392"/>
+                  <path d="M431 319 C437 345, 438 373, 428 411"/>
+                  <path d="M516 301 C526 324, 532 350, 525 381"/>
+                  <path d="M587 170 C606 204, 617 238, 617 270"/>
+                </g>
+
+                <path
+                  class="geodesic"
+                  d="M145 316 C225 225, 328 204, 415 282 C474 335, 527 313, 570 226"
+                  fill="none"
+                  stroke="url(#curveGradient)"
+                  stroke-width="6"
+                  stroke-linecap="round"
+                  filter="url(#glow)"
+                />
+
+                <g class="latent-points">
+                  <circle cx="145" cy="316" r="10"/>
+                  <circle cx="570" cy="226" r="10"/>
+                  <circle cx="271" cy="225" r="4"/>
+                  <circle cx="332" cy="234" r="5"/>
+                  <circle cx="390" cy="267" r="4"/>
+                  <circle cx="461" cy="320" r="4"/>
+                  <circle cx="515" cy="293" r="5"/>
+                </g>
+
+                <text x="113" y="350" class="svg-label">z₀</text>
+                <text x="582" y="216" class="svg-label">z₁</text>
+                <text x="305" y="190" class="svg-caption">geodesic γ(t)</text>
+              </svg>
+
+              <div class="formula-chip chip-a">d<sub>G</sub>(z₀, z₁)</div>
+              <div class="formula-chip chip-b">g<sub>z</sub>(u,v)</div>
+              <div class="formula-chip chip-c">f : 𝒳 → 𝒵</div>
+            </div>
+
+            <div class="visual-footer">
+              <span><i class="legend-dot mint"></i> data manifold</span>
+              <span><i class="legend-dot violet"></i> learned geometry</span>
+              <span><i class="legend-line"></i> geodesic path</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+
+      <div class="hero-scroll" aria-hidden="true">
+        <span>scroll to explore</span>
+        <i></i>
+      </div>
+    </section>
+
+    <section class="about section section-bordered" id="about">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <span class="section-index">01</span>
+          <div>
+            <p class="kicker">About</p>
+            <h2>Researching visual intelligence through a geometric lens.</h2>
+          </div>
+        </div>
+
+        <div class="about-copy reveal">
+          <p class="large-copy" id="about-intro">
+            I am a PhD researcher working at the intersection of computer vision, geometry,
+            and representation learning.
+          </p>
+          <div id="about-paragraphs"></div>
+
+          <div class="quick-links" id="social-links"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="research section" id="research">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <span class="section-index">02</span>
+          <div>
+            <p class="kicker">Research</p>
+            <h2>Questions I am interested in.</h2>
+          </div>
+          <p class="heading-note">
+            I work on methods that respect the structure of data rather than assuming every
+            representation lives in a flat Euclidean space.
+          </p>
+        </div>
+
+        <div class="research-grid" id="research-grid"></div>
+
+        <div class="research-equation reveal">
+          <div class="equation-label">guiding idea</div>
+          <div class="equation">
+            <span>visual data</span>
+            <b>→</b>
+            <span>representation</span>
+            <b>→</b>
+            <span class="equation-highlight">intrinsic geometry</span>
+            <b>→</b>
+            <span>better learning</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="publications section section-bordered" id="publications">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <span class="section-index">03</span>
+          <div>
+            <p class="kicker">Publications & preprints</p>
+            <h2>Selected research.</h2>
+          </div>
+          
+        </div>
+
+        <div class="publication-toolbar reveal">
+          <div class="publication-filters" id="publication-filters"></div>
+          <span class="publication-count" id="publication-count"></span>
+        </div>
+
+        <div class="publication-list" id="publication-list"></div>
+      </div>
+    </section>
+
+    <section class="projects section" id="projects">
+      <div class="container">
+        <div class="section-heading wide reveal">
+          <span class="section-index">04</span>
+          <div>
+            <p class="kicker">Projects</p>
+            <h2>Research in motion.</h2>
+          </div>
+          <p class="heading-note">
+            Use this section for thesis work, reproducibility projects, open-source code,
+            datasets, or visual research demos.
+          </p>
+        </div>
+
+        <div class="project-grid" id="project-grid"></div>
+      </div>
+    </section>
+
+    <section class="experience section section-bordered" id="experience">
+      <div class="container">
+        <div class="section-heading reveal">
+          <span class="section-index">05</span>
+          <div>
+            <p class="kicker">Trajectory</p>
+            <h2>Education & experience.</h2>
+          </div>
+        </div>
+
+        <div class="timeline reveal" id="timeline"></div>
+      </div>
+    </section>
+
+    <section class="teaching section" id="teaching">
+      <div class="container two-column">
+        <div class="section-heading reveal">
+          <span class="section-index">06</span>
+          <div>
+            <p class="kicker">Teaching Experience</p>
+            <h2>Courses, Labs, and Academic Experience.</h2>
+          </div>
+        </div>
+
+        <div class="teaching-grid reveal" id="teaching-grid"></div>
+      </div>
+    </section>
+
+    <section class="contact section section-bordered" id="contact">
+      <div class="container contact-shell reveal">
+        <div>
+          <p class="kicker">Contact</p>
+          <h2>Interested in geometry-aware learning?</h2>
+          <p id="contact-copy">
+            I am happy to discuss research, collaborations, reading groups, or related ideas
+            in computer vision and geometric machine learning.
+          </p>
+        </div>
+
+        <div class="contact-actions">
+          <a class="contact-email" id="contact-email" href="mailto:nandaakshit2000@gmail.com">
+            <span class="contact-label">Email</span>
+            <strong>nandaakshit2000@gmail.com</strong>
+            <span class="contact-arrow" aria-hidden="true">↗</span>
+          </a>
+          <div class="contact-links" id="contact-links"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <span id="footer-name">Akshit Nanda</span>
+        <span class="footer-separator">/</span>
+        Computer Vision × Geometry
+      </p>
+      <p>Built with HTML, CSS & JavaScript · <span id="year"></span></p>
+      <a href="#top" aria-label="Back to top">↑</a>
+    </div>
+  </footer>
+
+  <script src="site-data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
